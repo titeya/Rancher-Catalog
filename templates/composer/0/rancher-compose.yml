@@ -1,2 +1,35 @@
+.catalog
+  name: "composer"
+  version: "v0.8"
+  description: "CMS and publishing platform.\n Label \"composer\" on host for container creation" 
+  uuid: Composer-0
+  minimum_rancher_version: v0.51.0
+  questions:    
+    - variable: "MYSQL_DATABASE"
+      label: "Base MYSQL"
+      description: "Nom de la base de donnée Mysql"
+      type: "string"
+      required: true
+    - variable: "VIRTUAL_HOST"
+      label: "Domaine"
+      description: "Nom de domaine du site web"
+      type: "string"
+      required: true
+    - variable: "VOLUME"
+      label: "Volume"
+      description: "Chemin du volume"
+      type: "string"
+      required: false
+    - variable: "VOLUME_PLUGIN"
+      label: "Plugin du volume"
+      description: "Plugin à utiliser pour monter le volume (ex:convoy)"
+      type: "string"
+      required: false
+  
 Composer:
-  scale: 1
+  port: 80
+  interval: 2000
+  unhealthy_threshold: 3
+  request_line: GET / HTTP/1.0
+  healthy_threshold: 2
+  response_timeout: 2000
