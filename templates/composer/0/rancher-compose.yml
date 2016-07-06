@@ -1,7 +1,7 @@
 .catalog
   name: "composer"
   version: "v0.8"
-  description: "CMS and publishing platform.\n Label \"composer\" on host for container creation" 
+  description: "CMS and publishing platform. Label 'COMPOSER' on host for container creation" 
   uuid: Composer-0
   minimum_rancher_version: v0.51.0
   questions:    
