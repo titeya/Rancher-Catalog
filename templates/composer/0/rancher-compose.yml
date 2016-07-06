@@ -31,6 +31,6 @@ Composer:
     initializing_timeout: 60000
     unhealthy_threshold: 3
     strategy: recreate
-    request_line: GET "/" "HTTP/1.0"
+    request_line: GET / HTTP/1.0
     healthy_threshold: 2
     response_timeout: 2000
