@@ -1,9 +1,7 @@
 .catalog
   name: "composer"
   version: "v0.8"
-  description: "CMS and publishing platform. Label 'COMPOSER' on host for container creation" 
-  uuid: Composer-0
-  minimum_rancher_version: v0.51.0
+  description: "CMS and publishing platform. Label composer=1 on host for container creation" 
   questions:    
     - variable: "MYSQL_DATABASE"
       label: "Base MYSQL"
