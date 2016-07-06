@@ -1,14 +1,15 @@
-Composer:
-  environment:
-    MYSQL_DATABASE: CMSChamoniarde
-    VIRTUAL_HOST: chamoniarde.titeya.com
-  external_links:
-  - Mysql/mysql:db1
-  log_driver: ''
-  tty: true
-  log_opt: {}
+composer:
   image: titeya/composer
+  environment:
+    MYSQL_DATABASE: ${MYSQL_DATABASE}
+    VIRTUAL_HOST: ${VIRTUAL_HOST}
+  external_links:
+    - pxc/pxc:db1
   volumes:
-  - CMSCHAMONIARDE:/usr/share/nginx/www/html/images
+    - ${VOLUME}:/usr/share/nginx/www/html/images
+  tty: true
   stdin_open: true
-  volume_driver: convoy-nfs
+  volume_driver: ${VOLUME_DRIVER}
+  labels:
+    - io.rancher.scheduler.global: 'true'
+    - io.rancher.scheduler.affinity:host_label: 'composer=1'
