@@ -12,4 +12,4 @@ composer:
   volume_driver: ${VOLUME_DRIVER}
   labels:
     io.rancher.scheduler.global: "true"
-    io.rancher.scheduler.affinity:host_label: composer=1
+    io.rancher.scheduler.affinity:host_label: "composer=1"
