@@ -1,0 +1,14 @@
+Composer:
+  environment:
+    MYSQL_DATABASE: CMSChamoniarde
+    VIRTUAL_HOST: chamoniarde.titeya.com
+  external_links:
+  - Mysql/mysql:db1
+  log_driver: ''
+  tty: true
+  log_opt: {}
+  image: titeya/composer
+  volumes:
+  - CMSCHAMONIARDE:/usr/share/nginx/www/html/images
+  stdin_open: true
+  volume_driver: convoy-nfs
