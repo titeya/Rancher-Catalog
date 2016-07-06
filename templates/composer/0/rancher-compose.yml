@@ -20,16 +20,19 @@
       description: "Chemin du volume"
       type: "string"
       required: false
-    - variable: "VOLUME_PLUGIN"
-      label: "Plugin du volume"
-      description: "Plugin à utiliser pour monter le volume (ex:convoy)"
+    - variable: "VOLUME_DRIVER"
+      label: "DRIVER Volume"
+      description: "Driver à utiliser pour monter le volume (ex:convoy)"
       type: "string"
       required: false
   
 Composer:
-  port: 80
-  interval: 2000
-  unhealthy_threshold: 3
-  request_line: GET / HTTP/1.0
-  healthy_threshold: 2
-  response_timeout: 2000
+  health_check:
+    port: 80
+    interval: 2000
+    initializing_timeout: 60000
+    unhealthy_threshold: 3
+    strategy: recreate
+    request_line: GET "/" "HTTP/1.0"
+    healthy_threshold: 2
+    response_timeout: 2000
