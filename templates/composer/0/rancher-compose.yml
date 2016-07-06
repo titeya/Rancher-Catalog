@@ -1,8 +1,8 @@
 .catalog:
   name: "composer"
-  version: "v0.8"
+  version: "v0.1-educaas1"
   description: "CMS and publishing platform. Label composer=1 on host for container creation" 
-    questions:    
+  questions:    
     - variable: "MYSQL_DATABASE"
       label: "Base MYSQL"
       description: "Nom de la base de donnée Mysql"
