@@ -5,7 +5,7 @@
   questions:    
     - variable: "MYSQL_DATABASE"
       label: "Base MYSQL"
-      description: "Nom de la base de donnée Mysql"
+      description: "Nom de la base de donnee Mysql"
       type: "string"
       required: true
     - variable: "VIRTUAL_HOST"
@@ -20,8 +20,17 @@
       required: false
     - variable: "VOLUME_DRIVER"
       label: "DRIVER Volume"
-      description: "Driver à utiliser pour monter le volume (ex:convoy)"
+      description: "Driver a utiliser pour monter le volume (ex:convoy)"
       type: "string"
       required: false
       
 Composer:
+  health_check:
+    - port: 80
+    - interval: 2000
+    - initializing_timeout: 60000
+    - unhealthy_threshold: 3
+    - strategy: recreate
+    - request_line: GET / HTTP/1.0
+    - healthy_threshold: 2
+    - response_timeout: 2000
