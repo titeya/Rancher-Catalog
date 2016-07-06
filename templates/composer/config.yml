@@ -1,5 +1,6 @@
 name: Composer
 description: |
-  CMS and publishing platform by Titeya 
+  CMS and publishing platform by Titeya
+  Label composer=1 on host for container creation
 version: v0.1-educaas
 category: Blogging
