@@ -1,6 +1,5 @@
 name: Composer
 description: |
   CMS and publishing platform by Titeya
-  Label composer=1 on host for container creation
 version: Composer-V0.6
 category: Blogging
