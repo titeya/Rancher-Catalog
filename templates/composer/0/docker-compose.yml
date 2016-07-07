@@ -4,7 +4,7 @@ composer:
     COMPOSER_DB_NAME: ${MYSQL_DATABASE}
     VIRTUAL_HOST: ${VIRTUAL_HOST}
   external_links:
-    - pxc/pxc:db1
+    - pxc/pxc:mysql
   volumes:
     - ${VOLUME}:/usr/share/nginx/www/html/images
   tty: true
