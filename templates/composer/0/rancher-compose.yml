@@ -20,6 +20,7 @@
       description: "Chemin du volume composer"
       type: "string"
       required: false
+      default: "composer"
     - variable: "VOLUME"
       label: "Volume"
       description: "Chemin du volume"
