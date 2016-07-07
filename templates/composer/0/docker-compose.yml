@@ -1,7 +1,7 @@
 composer:
   image: registry.titeya.com:5000/titeya/composer
   environment:
-    MYSQL_DATABASE: ${MYSQL_DATABASE}
+    COMPOSER_DB_NAME: ${MYSQL_DATABASE}
     VIRTUAL_HOST: ${VIRTUAL_HOST}
   external_links:
     - pxc/pxc:db1
