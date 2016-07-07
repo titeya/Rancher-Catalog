@@ -11,5 +11,6 @@ composer:
   stdin_open: true
   volume_driver: ${VOLUME_DRIVER}
   labels:
+    io.rancher.container.pull_image: "always"
     io.rancher.scheduler.global: "true"
     io.rancher.scheduler.affinity:host_label: "composer=1"
