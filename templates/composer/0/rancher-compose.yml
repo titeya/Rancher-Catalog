@@ -1,7 +1,9 @@
 .catalog:
   name: "composer"
   version: "Composer-V0.6"
-  description: "CMS and publishing platform" 
+  description: "CMS and publishing platform"
+  maintainer: "Nicolas Bellamy <n.bellamy@titeya.com>"
+  uuid: composer-0
   questions:    
     - variable: "MYSQL_DATABASE"
       label: "Base MYSQL"
