@@ -25,6 +25,6 @@
       description: "Driver a utiliser pour monter le volume (ex:convoy)"
       type: "string"
       required: false
-      default: "convoy-gluser"
+      default: "convoy-gluster"
       
 Composer:
