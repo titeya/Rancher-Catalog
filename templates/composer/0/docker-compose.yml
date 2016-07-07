@@ -6,6 +6,7 @@ composer:
   external_links:
     - pxc/pxc:mysql
   volumes:
+    - ${VOLUME_COMPOSER}:/usr/share/nginx/www
     - ${VOLUME}:/usr/share/nginx/www/html/images
   tty: true
   stdin_open: true
