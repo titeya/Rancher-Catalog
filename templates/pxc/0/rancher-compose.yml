@@ -14,8 +14,8 @@
       type: string
       required: true
       label: "PXC SST Password"
-      description: "Password given to the sst mysql user"   
-      default: "password"   
+      description: "Password given to the sst mysql user"
+      default: "password"
     - variable: "mysql_database"
       type: string
       required: false
@@ -32,7 +32,6 @@
       label: "MySQL DB Password"
       description: "Password for the MySQL user of the created database"
 pxc:
-  scale: 3
   health_check:
     port: 8000
     interval: 2000
@@ -40,7 +39,7 @@ pxc:
     strategy: none
     request_line: GET / HTTP/1.1
     healthy_threshold: 2
-    response_timeout: 2000  
+    response_timeout: 2000
   metadata:
     mysqld: |
       innodb_buffer_pool_size=512M

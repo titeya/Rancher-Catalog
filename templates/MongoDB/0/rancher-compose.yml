@@ -12,7 +12,6 @@
       required: true
       default: "rs0"
 mongo-cluster:
-  scale: 3
   retain_ip: true
   metadata:
     mongo:
