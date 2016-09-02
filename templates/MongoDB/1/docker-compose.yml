@@ -6,22 +6,23 @@ mongo-cluster:
   entrypoint: /opt/rancher/bin/entrypoint.sh
   command:
   - --replSet
-  - "rs0"
-  image: mongo:3.0
+  - "${replset_name}"
+  image: mongo:3.2
   labels:
     io.rancher.container.hostname_override: container_name
     io.rancher.sidekicks: mongo-base, mongo-datavolume
-    io.rancher.scheduler.affinity:host_label: "composer=1"
+    io.rancher.scheduler.affinity:host_label: "mongodb=1"
   volumes_from:
     - mongo-datavolume
     - mongo-base
 mongo-base:
   restart: always
+  net: none
   tty: true
   labels:
     io.rancher.container.hostname_override: container_name
     io.rancher.container.start_once: true
-    io.rancher.scheduler.affinity:host_label: "composer=1"
+    io.rancher.scheduler.affinity:host_label: "mongodb=1"
   image: rancher/mongodb-conf:v0.1.0
   stdin_open: true
   entrypoint: /bin/true
@@ -30,7 +31,7 @@ mongo-datavolume:
   labels:
     io.rancher.container.hostname_override: container_name
     io.rancher.container.start_once: true
-    io.rancher.scheduler.affinity:host_label: "composer=1"
+    io.rancher.scheduler.affinity:host_label: "mongodb=1"
   volumes:
     - /data/db
   entrypoint: /bin/true
