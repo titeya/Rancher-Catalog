@@ -4,6 +4,7 @@ pxc-clustercheck:
   labels:
     io.rancher.container.hostname_override: container_name
     io.rancher.scheduler.affinity:host_label: "mysql=1"
+    io.rancher.scheduler.global: "true"
   volumes_from:
     - 'pxc-data'
 pxc-server:
@@ -18,6 +19,7 @@ pxc-server:
   labels:
     io.rancher.container.hostname_override: container_name
     io.rancher.scheduler.affinity:host_label: "mysql=1"
+    io.rancher.scheduler.global: "true"
   volumes_from:
     - 'pxc-data'
   entrypoint: bash -x /opt/rancher/start_pxc
@@ -33,7 +35,8 @@ pxc-data:
   command: /bin/true
   labels:
     io.rancher.container.start_once: true
-    io.rancher.scheduler.affinity:host_label: "mysql=1"   
+    io.rancher.scheduler.affinity:host_label: "mysql=1"
+    io.rancher.scheduler.global: "true"
 pxc:
   image: flowman/percona-xtradb-cluster-confd:v0.2.0
   labels:
@@ -41,5 +44,6 @@ pxc:
     io.rancher.container.hostname_override: container_name
     io.rancher.scheduler.affinity:container_label_soft_ne: io.rancher.stack_service.name=$${stack_name}/$${service_name}
     io.rancher.scheduler.affinity:host_label: "mysql=1"
+    io.rancher.scheduler.global: "true"
   volumes_from:
     - 'pxc-data'
