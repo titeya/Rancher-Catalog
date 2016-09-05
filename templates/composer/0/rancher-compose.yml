@@ -15,12 +15,6 @@
       description: "Nom de domaine du site web"
       type: "string"
       required: true
-    - variable: "VOLUME_COMPOSER"
-      label: "Volume Composer"
-      description: "Chemin du volume composer"
-      type: "string"
-      required: false
-      default: "composer"
     - variable: "VOLUME"
       label: "Volume"
       description: "Chemin du volume"
