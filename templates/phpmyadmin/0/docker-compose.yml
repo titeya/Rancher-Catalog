@@ -5,9 +5,6 @@ PhpMyAdmin:
     io.rancher.scheduler.global: 'true'
     io.rancher.container.pull_image: always
     io.rancher.scheduler.affinity:host_label: composer=1
-  volumes:
-    - phpsession:/sessions:rw
-  volume_driver: convoy-nfs
   tty: true
   image: phpmyadmin/phpmyadmin
   stdin_open: true
