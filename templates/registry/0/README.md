@@ -1,9 +1,6 @@
-# COMPOSER
+# REGISTRY
 
-CMS and publishing platform powered by Titeya
+Docker Registry server with tls and auth
 
 ## Usage
-Use Label "composer=1" on host for container deployment
-
-
-
+Use Label "registry=1" on host for container deployment
