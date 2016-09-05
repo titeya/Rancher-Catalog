@@ -1,0 +1,20 @@
+registryv2:
+  ports:
+  - 5000:5000/tcp
+  environment:
+    REGISTRY_AUTH: htpasswd
+    REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
+    REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
+    REGISTRY_HTTP_TLS_CERTIFICATE: /certs/fullchain.pem
+    REGISTRY_HTTP_TLS_KEY: /certs/privkey.pem
+  labels:
+    io.rancher.scheduler.global: 'true'
+    io.rancher.container.pull_image: always
+    io.rancher.scheduler.affinity:host_label: registry=1
+  tty: true
+  image: registry:2
+  volumes:
+  - /etc/password:/auth
+  - /etc/certs/titeya:/certs
+  stdin_open: true
+

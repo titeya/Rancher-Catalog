@@ -1,0 +1,7 @@
+.catalog:
+  name: "registry"
+  version: "registry-V0.6"
+  description: "Docker Registry server with tls and auth"
+  maintainer: "Nicolas Bellamy <n.bellamy@titeya.com>"
+  uuid: registryv2-0
+      
