@@ -10,11 +10,6 @@
       description: "Nom de la base de donnee Mysql"
       type: "string"
       required: true
-    - variable: "VIRTUAL_HOST"
-      label: "Domaine"
-      description: "Nom de domaine du site web"
-      type: "string"
-      required: true
     - variable: "VOLUME"
       label: "Volume"
       description: "Chemin du volume"
