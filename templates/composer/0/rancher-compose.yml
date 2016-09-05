@@ -4,7 +4,7 @@
   description: "CMS and publishing platform"
   maintainer: "Nicolas Bellamy <n.bellamy@titeya.com>"
   uuid: composer-0
-  questions:    
+  questions:
     - variable: "MYSQL_DATABASE"
       label: "Base MYSQL"
       description: "Nom de la base de donnee Mysql"
@@ -31,8 +31,8 @@
       description: "Driver a utiliser pour monter le volume (ex:convoy)"
       type: "string"
       required: false
-      default: "convoy-gluster"
-      
+      default: "convoy-nfs"
+
 composer:
   health_check:
       port: 80
@@ -41,4 +41,3 @@ composer:
       request_line: GET / HTTP/1.0
       healthy_threshold: 2
       response_timeout: 10000
-
