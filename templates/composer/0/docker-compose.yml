@@ -4,7 +4,7 @@ composer:
     COMPOSER_DB_NAME: ${MYSQL_DATABASE}
     COMPOSER_DB_PASSWORD: ${MYSQL_DB_PASSWORD}
   external_links:
-    - mysql/galera-lb:mysql
+    - pxc/pxc:mysql
     - memcache/memcache:mcserver
   volumes:
     - ${VOLUME}:/usr/share/nginx/www/html/images
