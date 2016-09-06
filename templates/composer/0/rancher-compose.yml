@@ -10,6 +10,11 @@
       description: "Nom de la base de donnee Mysql"
       type: "string"
       required: true
+    - variable: "MYSQL_DB_PASSWORD"
+      label: "Mot de passe MYSQL"
+      description: "Mot de passe de la base de donnee Mysql"
+      type: "string"
+      required: true
     - variable: "VOLUME"
       label: "Volume"
       description: "Chemin du volume"
