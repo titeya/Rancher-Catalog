@@ -3,7 +3,7 @@ composer:
   environment:
     COMPOSER_DB_NAME: ${MYSQL_DATABASE}
   external_links:
-    - pxc/pxc:mysql
+    - mysql/galera-lb:mysql
     - memcache/memcache:mcserver
   volumes:
     - ${VOLUME}:/usr/share/nginx/www/html/images
