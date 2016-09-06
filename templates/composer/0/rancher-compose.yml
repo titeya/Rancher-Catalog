@@ -5,13 +5,18 @@
   maintainer: "Nicolas Bellamy <n.bellamy@titeya.com>"
   uuid: composer-0
   questions:
+    - variable: "MYSQL_ROOT_PASSWORD"
+      label: "Base MYSQL"
+      description: "Mot de pass root Mysql"
+      type: "string"
+      required: true
     - variable: "MYSQL_DATABASE"
       label: "Base MYSQL"
       description: "Nom de la base de donnee Mysql"
       type: "string"
       required: true
     - variable: "MYSQL_DB_PASSWORD"
-      label: "Mot de passe MYSQL"
+      label: "Mot de passe app MYSQL"
       description: "Mot de passe de la base de donnee Mysql"
       type: "string"
       required: true
