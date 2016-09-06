@@ -4,6 +4,7 @@ composer:
     COMPOSER_DB_NAME: ${MYSQL_DATABASE}
   external_links:
     - pxc/pxc:mysql
+    - memcache/memcache:mcserver
   volumes:
     - ${VOLUME}:/usr/share/nginx/www/html/images
   tty: true
