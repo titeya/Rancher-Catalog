@@ -1,5 +1,5 @@
 composer-dev:
-  image: registry.titeya.com:5000/titeya/composerDev
+  image: registry.titeya.com:5000/titeya/composerdev
   environment:
     COMPOSER_DB_NAME: ${MYSQL_DATABASE}
     COMPOSER_DB_PASSWORD: ${MYSQL_DB_PASSWORD}
