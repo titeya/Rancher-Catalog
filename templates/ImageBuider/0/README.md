@@ -1,9 +1,6 @@
-# COMPOSER
+# IMAGE BUILDER
 
-CMS and publishing platform powered by Titeya
+Build and push image to private registry
 
 ## Usage
-Use Label "composer=1" on host for container deployment
-
-
-
+Use Label "registry=1" on host for container deployment
