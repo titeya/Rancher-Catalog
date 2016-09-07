@@ -3,5 +3,5 @@
   version: "memcache-V1"
   description: "Memcache server with label nfs=server"
   maintainer: "Nicolas Bellamy <n.bellamy@titeya.com>"
-  uuid: memcached-0
+  uuid: memcache-0
 memcache:

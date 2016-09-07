@@ -1,5 +1,5 @@
-name: Memcached
+name: Memcache
 description: |
   Memcache server with label nfs=server
-version: Memcached-V0.1
+version: memcache-V1
 category: Clustering
