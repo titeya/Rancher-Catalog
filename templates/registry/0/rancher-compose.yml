@@ -4,4 +4,11 @@
   description: "Docker Registry server with tls and auth"
   maintainer: "Nicolas Bellamy <n.bellamy@titeya.com>"
   uuid: registryv2-0
-      
+  questions:
+    - variable: STORAGE_VOLUME
+      label: Volume
+      description: |
+        Dossier des certificats
+      default: "/etc/certs"
+      required: false
+      type: string

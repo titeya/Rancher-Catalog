@@ -15,6 +15,5 @@ registryv2:
   image: registry:2
   volumes:
   - /etc/password:/auth
-  - /etc/certs/titeya:/certs
+  - ${STORAGE_VOLUME}:/certs
   stdin_open: true
-

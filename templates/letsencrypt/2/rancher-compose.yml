@@ -69,8 +69,9 @@
       description: |
         Certificate and private key can optionally be saved to a host path, named volume
         or Convoy storage volume. Enter host path or volume name suffixed with a colon (:).
-        E.g: `/etc/certs:`.
+      default: "/etc/certs:"
       required: false
+      /etc/default:erts:
       type: string
     - variable: PROVIDER
       label: DNS Provider
