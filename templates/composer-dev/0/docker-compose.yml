@@ -8,7 +8,7 @@ composer-dev:
     - galera/galera-lb:mysql
     - memcache/memcache:mcserver
   volumes:
-    - ${VOLUME}:/usr/share/nginx/www/html/images
+    - ${VOLUME}:/usr/share/nginx/
   tty: true
   stdin_open: true
   labels:
