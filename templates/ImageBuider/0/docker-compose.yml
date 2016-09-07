@@ -1,0 +1,17 @@
+composer:
+  image: titeya/imagebuilder
+  environment:
+    IMAGE_INFOS: ${IMAGE_INFOS}
+    GIT_REPO: ${GIT_REPO}
+    DOCKER_REPO: ${DOCKER_REPO}
+    REPO_USER: ${REPO_USER}
+    REPO_PASS: ${REPO_PASS}
+    REPO_EMAIL: ${REPO_EMAIL}
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+  tty: true
+  stdin_open: true
+  labels:
+    io.rancher.container.pull_image: "always"
+    io.rancher.scheduler.global: "true"
+    io.rancher.scheduler.affinity:host_label: "registry=1"
