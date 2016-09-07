@@ -1,6 +1,6 @@
 .catalog:
   name: "registry"
-  version: "registry-V0.6"
+  version: "registry-V0.1"
   description: "Docker Registry server with tls and auth"
   maintainer: "Nicolas Bellamy <n.bellamy@titeya.com>"
   uuid: registryv2-0
@@ -9,6 +9,6 @@
       label: Volume
       description: |
         Dossier des certificats
-      default: "/etc/certs"
+      default: "/etc/certs/titeya"
       required: false
       type: string
