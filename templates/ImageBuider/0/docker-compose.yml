@@ -1,4 +1,4 @@
-composer:
+imagebuilder:
   image: titeya/imagebuilder
   environment:
     IMAGE_INFOS: ${IMAGE_INFOS}
