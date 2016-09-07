@@ -1,4 +1,4 @@
-# MEMCACHED
+# MEMCACHE
 
 Memcache Server
 
