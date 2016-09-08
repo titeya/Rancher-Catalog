@@ -1,6 +1,6 @@
 PhpMyAdmin:
   external_links:
-  - pxc/pxc:db
+  - galera/galera-lb:db
   labels:
     io.rancher.scheduler.global: 'true'
     io.rancher.container.pull_image: always
