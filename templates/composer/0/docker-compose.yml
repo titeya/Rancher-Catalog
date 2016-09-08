@@ -1,5 +1,5 @@
 composer:
-  image: registry.titeya.com:5000/titeya/composer:v1
+  image: registry.titeya.com:5000/titeya/composer
   environment:
     COMPOSER_DB_NAME: ${MYSQL_DATABASE}
     COMPOSER_DB_PASSWORD: ${MYSQL_DB_PASSWORD}
