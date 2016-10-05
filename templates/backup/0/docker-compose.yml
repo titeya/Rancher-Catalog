@@ -21,7 +21,6 @@ backup:
     - galera/galera-lb:mysql
     - MongoDB/mongo-cluster:mongo
   volumes:
-    - /backup:/backup
     - /exports:/exports
     - /var/run/docker.sock:/tmp/docker.sock:ro
   tty: true
