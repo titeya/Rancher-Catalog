@@ -23,6 +23,7 @@ composer:
   volumes:
     - /backup:/backup
     - /exports:/exports
+    - /var/run/docker.sock:/tmp/docker.sock:ro
   tty: true
   stdin_open: true
   labels:
