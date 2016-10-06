@@ -96,7 +96,6 @@
       label: "Lancement au demarrage"
       description: "Lancer au demarrage du container ? (oui ou vide)"
       type: "string"
-      required: true
       default: "oui"
 
 backup:
