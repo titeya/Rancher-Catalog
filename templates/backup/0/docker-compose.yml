@@ -1,5 +1,5 @@
 backup:
-  image: registry.titeya.com:5000/titeya/backup
+  image: titeya/dockerbackup
   environment:
     MYSQL_HOST: ${MYSQL_HOST}
     MYSQL_PORT: ${MYSQL_PORT}
