@@ -1,5 +1,5 @@
 name: Memcache
 description: |
-  Memcache server with label nfs=server
+  Memcache server with label composer=true
 version: memcache-V1
 category: Clustering
