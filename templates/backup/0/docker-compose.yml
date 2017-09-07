@@ -18,7 +18,7 @@ backup:
     MAX_BACKUPS: ${MAX_BACKUPS}
     INIT_BACKUP: ${INIT_BACKUP}
   external_links:
-    - galera/galera-lb:mysql
+    - mysql/mysql:mysql
     - MongoDB/mongo-cluster:mongo
   volumes:
     - /exports:/exports
