@@ -5,14 +5,13 @@ composer:
     COMPOSER_DB_PASSWORD: ${MYSQL_DB_PASSWORD}
     MYSQL_ENV_MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
   external_links:
-    - galera/galera-lb:mysql
+    - mysql/mysql:mysql
     - memcached/memcache:mcserver
   volumes:
     - ${VOLUME}:/usr/share/nginx/www/html/images
   tty: true
   stdin_open: true
-  volume_driver: ${VOLUME_DRIVER}
   labels:
     io.rancher.container.pull_image: "always"
     io.rancher.scheduler.global: "true"
-    io.rancher.scheduler.affinity:host_label: "composer=1"
+    io.rancher.scheduler.affinity:host_label: "composer=true"
