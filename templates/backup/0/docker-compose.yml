@@ -28,4 +28,4 @@ backup:
   labels:
     io.rancher.container.pull_image: "always"
     io.rancher.scheduler.global: "true"
-    io.rancher.scheduler.affinity:host_label: "nfs=server"
+    io.rancher.scheduler.affinity:host_label: "backup=true"
