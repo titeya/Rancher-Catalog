@@ -51,6 +51,11 @@
       description: "Mot de passe MongoDb"
       type: "string"
       required: false
+    - variable: "VOLUME"
+      label: "Dossier host à sauvegarder"
+      description: "Chemin du dosser"
+      type: "string"
+      required: false
     - variable: "FTP_HOST"
       label: "Hote FTP"
       description: "Hote serveur FTP"
