@@ -19,9 +19,9 @@ backup:
     INIT_BACKUP: ${INIT_BACKUP}
   external_links:
     - mysql/mysql:mysql
-    - MongoDB/mongo-cluster:mongo
+    - mongodb/mongo:mongo
   volumes:
-    - /exports:/exports
+    - ${VOLUME}:/exports
     - /var/run/docker.sock:/tmp/docker.sock:ro
   tty: true
   stdin_open: true
